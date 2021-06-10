@@ -29,7 +29,7 @@ function ProductsPage() {
     fetch("/api/products")
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data);
+        setProducts(data.map((d) => ({ id: d._id, ...d })));
       })
       .then(() => {
         setIsLoaded(true);
