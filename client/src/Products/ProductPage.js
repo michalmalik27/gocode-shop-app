@@ -47,8 +47,7 @@ const ProductPage = () => {
     fetch(`/api/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setProduct(data);
+        setProduct({ id: data._id, ...data });
       })
       .then(() => {
         setIsLoaded(true);
