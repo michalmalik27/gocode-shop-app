@@ -44,7 +44,7 @@ const ProductPage = () => {
   }, [id]);
 
   let fetchProduct = () => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
+    fetch(`/api/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
