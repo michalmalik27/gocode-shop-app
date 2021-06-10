@@ -26,7 +26,7 @@ function ProductsPage() {
   }, []);
 
   let fetchProducts = () => {
-    fetch("https://fakestoreapi.com/products")
+    fetch("/api/products")
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);
