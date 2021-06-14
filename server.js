@@ -41,7 +41,9 @@ app.get(products_url, (req, res) => {
 
   Product.find(query)
     .exec()
-    .then((products) => res.send(products))
+    .then((products) =>
+      res.send(products.map((p) => ({ id: p._doc._id, ...p._doc })))
+    )
     .catch((error) => {
       res.status(500);
       res.send(error.message);
@@ -52,7 +54,7 @@ app.get(`${products_url}/:id`, (req, res) => {
   const { id } = req.params;
 
   Product.findById(id)
-    .then((product) => res.send(product))
+    .then((p) => res.send({ id: p._doc._id, ...p._doc }))
     .catch((error) => {
       res.status(500);
       res.send(error.message);
