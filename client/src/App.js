@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <div className={classes.root}>
-        <AppBar position="sticky">
+        <AppBar position="fixed">
           <Toolbar>
             <IconButton
               edge="start"
@@ -54,17 +54,17 @@ function App() {
       <div className={classes.paper}>
         {/* <Grid container spacing={3}>
           <Grid item xs={12}> */}
-            <Router>
-              <Switch>
-                <Route path="/products/:id">
-                  <ProductPage />
-                </Route>
-                <Route path="/">
-                  <ProductsPage />
-                </Route>
-              </Switch>
-            </Router>
-          {/* </Grid>
+        <Router>
+          <Switch>
+            <Route path="/products/:id">
+              <ProductPage />
+            </Route>
+            <Route path="/">
+              <ProductsPage />
+            </Route>
+          </Switch>
+        </Router>
+        {/* </Grid>
           <Grid item xs={3}>
             <ShoppingCart />
           </Grid>
