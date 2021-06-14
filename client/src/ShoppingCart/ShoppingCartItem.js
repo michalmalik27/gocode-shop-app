@@ -11,28 +11,22 @@ const useStyles = makeStyles((theme) => ({
     height: 100,
     width: 100,
   },
-  controls: {
-    display: "flex",
-    alignItems: "center",
-    paddingLeft: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-  },
 }));
 
 const ShoppingCartItem = ({ title, count, price, image }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <div className={classes.details}>
+    <CardContent>
+      <div>
         <Grid container spacing={2}>
           <Grid item xs={9}>
             <CardContent className={classes.content}>
               <Typography variant="subtitle1" color="textSecondary">
                 {title}
               </Typography>
-              <label>{count}</label> 
-              <label>*</label>  
+              <label>{count}</label>
+              <label>*</label>
               <label>${price}</label>
             </CardContent>
           </Grid>
@@ -41,7 +35,7 @@ const ShoppingCartItem = ({ title, count, price, image }) => {
           </Grid>
         </Grid>
       </div>
-    </Card>
+    </CardContent>
   );
 };
 

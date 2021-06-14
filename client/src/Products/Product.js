@@ -6,7 +6,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Badge from "@material-ui/core/Badge";
 import Add from "@material-ui/icons/Add";
 import Minimize from "@material-ui/icons/Minimize";
 import React from "react";

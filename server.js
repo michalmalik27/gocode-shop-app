@@ -118,5 +118,5 @@ mongoose
   })
   .then(() => {
     app.listen(process.env.PORT || 9090);
-    console.log("Connected...");
+    console.log("Connected.....");
   });
